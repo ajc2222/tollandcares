@@ -50,7 +50,7 @@ a:focus-visible {
   color: var(--cream);
 }
 .cinematic-header {
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 .brand {
   font-weight: 750;
@@ -320,59 +320,70 @@ a:focus-visible {
 @media (max-width: 700px) {
   .site-header {
     padding: 22px 6%;
+    display: grid;
+    grid-template-columns: 1fr auto;
   }
   .header-actions {
-    gap: 12px;
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 13px;
+    margin-left: 0;
   }
   .site-header nav {
-    gap: 16px;
-  }
-  .site-header nav a:nth-child(2) {
-    display: none;
+    gap: 24px;
+    font-size: 12px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
   }
   .social-links {
+    order: -1;
     gap: 6px;
   }
   .social-links a {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
   }
   .brand {
-    font-size: 21px;
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+    font-size: 22px;
   }
   .brand span {
-    font-size: 27px;
+    font-size: 28px;
   }
   .stage {
     min-height: 650px;
   }
   .film {
-    height: 48%;
-    top: 15%;
-    object-fit: contain;
+    top: 0;
+    height: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: 68% center;
     background: #172c23;
   }
   .shade {
-    background: linear-gradient(
-      0deg,
-      #102b21 0%,
-      #102b21 38%,
-      transparent 64%,
-      #102b2190 100%
-    );
+    background:
+      linear-gradient(180deg, rgba(6, 24, 17, 0.88) 0%, rgba(6, 24, 17, 0.3) 24%, transparent 44%),
+      linear-gradient(0deg, rgba(6, 24, 17, 0.96) 0%, rgba(6, 24, 17, 0.78) 37%, rgba(6, 24, 17, 0.14) 68%, transparent 82%);
   }
   .caption.low,
   .caption.high {
-    top: 55%;
-    bottom: auto;
+    top: auto;
+    bottom: 17%;
     width: 88%;
   }
   .caption h1,
   .caption h2 {
-    font-size: 50px;
+    font-size: clamp(48px, 14vw, 60px);
     letter-spacing: -2px;
-    line-height: 1;
-    margin-bottom: 14px;
+    line-height: 0.96;
+    margin-bottom: 18px;
+    text-shadow: 0 3px 28px rgba(3, 17, 11, 0.7);
   }
   .chapter {
     font-size: 12px;
@@ -386,12 +397,14 @@ a:focus-visible {
     font-size: 31px;
   }
   .scene-label {
-    font-size: 14px;
-    margin-top: 5px;
+    font-size: 15px;
+    line-height: 1.45;
+    margin-top: 6px;
   }
   .film-footer {
-    bottom: 18px;
-    font-size: 12px;
+    bottom: 24px;
+    font-size: 11px;
+    letter-spacing: 0.8px;
   }
   .community {
     padding: 65px 6%;
