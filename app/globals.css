@@ -206,14 +206,12 @@ a:focus-visible {
   letter-spacing: 0.5px;
 }
 .play-story {
-  position: absolute;
+  position: relative;
   z-index: 2;
-  left: 50%;
-  bottom: 92px;
-  transform: translateX(-50%);
   display: none;
   align-items: center;
   gap: 9px;
+  margin-top: 18px;
   border: 1px solid rgba(247, 243, 233, 0.55);
   border-radius: 999px;
   padding: 12px 18px;
@@ -224,6 +222,7 @@ a:focus-visible {
   letter-spacing: 0.5px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  pointer-events: auto;
 }
 .play-story svg {
   width: 15px;
@@ -231,7 +230,7 @@ a:focus-visible {
   fill: currentColor;
 }
 .play-story:active {
-  transform: translateX(-50%) scale(0.97);
+  transform: scale(0.97);
 }
 .timeline {
   position: absolute;
