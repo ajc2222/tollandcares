@@ -205,32 +205,8 @@ a:focus-visible {
   font-size: 12px;
   letter-spacing: 0.5px;
 }
-.play-story {
-  position: relative;
-  z-index: 2;
+.mobile-story-prompt {
   display: none;
-  align-items: center;
-  gap: 9px;
-  margin-top: 18px;
-  border: 1px solid rgba(247, 243, 233, 0.55);
-  border-radius: 999px;
-  padding: 12px 18px;
-  background: rgba(10, 35, 26, 0.78);
-  color: var(--cream);
-  font: inherit;
-  font-size: 13px;
-  letter-spacing: 0.5px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  pointer-events: auto;
-}
-.play-story svg {
-  width: 15px;
-  height: 15px;
-  fill: currentColor;
-}
-.play-story:active {
-  transform: scale(0.97);
 }
 .timeline {
   position: absolute;
@@ -352,12 +328,15 @@ a:focus-visible {
 .static {
   height: 100svh;
 }
-.mobile-auto {
-  height: 100svh;
-}
 @media (max-width: 700px) {
-  .play-story {
-    display: inline-flex;
+  .story {
+    height: 100svh;
+  }
+  .desktop-story-prompt {
+    display: none;
+  }
+  .mobile-story-prompt {
+    display: inline;
   }
   .site-header {
     padding: 22px 6%;
@@ -397,15 +376,11 @@ a:focus-visible {
     font-size: 28px;
   }
   .stage {
-    min-height: 650px;
+    min-height: 100svh;
+    background: #172c23 url('/care-poster.jpg') 68% center/cover no-repeat;
   }
   .film {
-    top: 0;
-    height: 100%;
-    aspect-ratio: auto;
-    object-fit: cover;
-    object-position: 68% center;
-    background: #172c23;
+    display: none;
   }
   .shade {
     background:
@@ -446,6 +421,9 @@ a:focus-visible {
     bottom: 24px;
     font-size: 11px;
     letter-spacing: 0.8px;
+  }
+  .timeline {
+    display: none;
   }
   .community {
     padding: 65px 6%;
