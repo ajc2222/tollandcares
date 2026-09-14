@@ -16,7 +16,7 @@ export function SocialLinks() {
         </svg>
       </a>
       <a
-        href="https://www.venmo.com/u/Tolland"
+        href="https://venmo.com/u/Tolland-Cares"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Donate with Venmo (opens in a new tab)"

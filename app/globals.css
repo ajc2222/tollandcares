@@ -211,7 +211,7 @@ a:focus-visible {
   left: 50%;
   bottom: 92px;
   transform: translateX(-50%);
-  display: inline-flex;
+  display: none;
   align-items: center;
   gap: 9px;
   border: 1px solid rgba(247, 243, 233, 0.55);
@@ -357,6 +357,9 @@ a:focus-visible {
   height: 100svh;
 }
 @media (max-width: 700px) {
+  .play-story {
+    display: inline-flex;
+  }
   .site-header {
     padding: 22px 6%;
     display: grid;
